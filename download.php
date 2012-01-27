@@ -62,30 +62,8 @@ function force_download($file_name) {
   }
   
 }
-
-
-if(!$_GET['f']) {
-  // Redirect user to specified page if no variable has been passed in the URL
-  $redirect_path = 'PATH_TO_REDIRECT';
-  header('location: '.$redirect_path);
   
-}else{
-  $f = $_GET['f'];
-  
-  // Prevent visitors from downloading files by passing a relative path
-  // If the url requests a file in a specified directory, strip relative path.
-  strrchr($f, '/') ? $file = substr(strrchr($f,'/'),1) : $file = $f;
-  
-  // This is where you want to perform any checks against the file path URL.
-  // Your files should be setup in such a way that downloadble files are in a
-  // specific location. That way, you can specify the file path here in the code
-  // and not rely solely on the value passed in the URL.
-  }
-  
-  // Perform any pre-formatting to the filename to create the appropriate path to
-  // to the file itself.
-  $file_path = $file;
-  
+  $file_path = "{PATH_TO_FILE}";
   force_download($file_path);
 }
 
