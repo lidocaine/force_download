@@ -62,17 +62,17 @@ function force_download($file_name) {
   }
   
 }
-  // Replace {PATH_TO_FILE} with your method of specifying the file's name and path
-  // For example: this script was originally developed to receive a file specified
-  // by name in the URL, located in a specific directory.  My original code looked
-  // something like this...
-  //
-  // $fname = $_GET['f'];
-  // $file_path = '/downloads/'.$fname;
-  //
+
+// Replace {PATH_TO_FILE} with your method of specifying the file's name and path
+// For example: this script was originally developed to receive a file specified
+// by name in the URL, located in a specific directory.  My original code looked
+// something like this...
+//
+// $fname = $_GET['f'];
+// $file_path = '/downloads/'.$fname;
+//
   
-  $file_path = "{PATH_TO_FILE}";
-  force_download($file_path);
-}
+$file_path = "{PATH_TO_FILE}";
+force_download($file_path);
 
 ?>
